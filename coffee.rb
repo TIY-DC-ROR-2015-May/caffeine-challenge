@@ -1,3 +1,4 @@
 class Coffee
-  # Add code here
+  def initialize type
+  end
 end
