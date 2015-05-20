@@ -3,8 +3,19 @@ require 'minitest/autorun'
 require './human'
 require './coffee'
 
+require 'pry'
+
 
 class CaffeineTest < MiniTest::Test
+  def test_humans_know_their_name
+    person = Human.new "Rodney"
+    assert_equal person.name, "Rodney"
+    assert_equal person.loud_name, "RODNEY!"
+
+    person.name = "Tall Person"
+    assert_equal person.name, "Tall Person"
+  end
+
   def test_humans_tend_to_be_sleepy
     dave = Human.new "Dave"
     assert dave.alertness < 0.1

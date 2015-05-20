@@ -1,6 +1,19 @@
 class Human
   def initialize name
     @alertness = 0
+    @stored_name = name
+  end
+
+  def name
+    @stored_name
+  end
+
+  def name= new_name
+    @stored_name = new_name
+  end
+
+  def loud_name
+    name.upcase + "!"
   end
 
   def alertness
