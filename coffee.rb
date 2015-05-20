@@ -1,6 +1,8 @@
 class Coffee
+  SIPS_WHEN_FULL = 3
+
   def initialize type
-    @sips = 3
+    @sips = SIPS_WHEN_FULL
   end
 
   def full?
@@ -9,7 +11,7 @@ class Coffee
     # else
     #   false
     # end
-    @sips == 3
+    @sips == SIPS_WHEN_FULL
   end
 
   def take_sip
