@@ -3,6 +3,7 @@ require 'minitest/autorun'
 require './human'
 require './coffee'
 
+
 class CaffeineTest < MiniTest::Test
   def test_humans_tend_to_be_sleepy
     dave = Human.new "Dave"
@@ -29,7 +30,7 @@ class CaffeineTest < MiniTest::Test
 
     mallory.buy tsmf
     mallory.drink!
-    assert_within_epsilon mallory.alertness, 0.33, 0.1
+    assert_in_epsilon mallory.alertness, 0.33, 0.1
     refute tsmf.full?
     refute tsmf.empty?
   end
